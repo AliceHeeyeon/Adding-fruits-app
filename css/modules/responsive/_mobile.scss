@@ -1,0 +1,180 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 50px;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 2px 2px #717070;
+}
+
+#new-fruits {
+    margin: 10px 10px 20px 0px;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+button {
+    width: 140px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add-btn {
+    background: rgb(34, 159, 34);
+    color: white;
+}
+
+#delete-btn {
+    background: rgb(243, 57, 57);
+    color: white;
+}
+
+#fruits-cart {
+    margin-top: 35px;
+    width: 500px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 60px;
+    padding: 30px;
+    border: 5px solid rgb(2, 94, 2);
+    border-radius: 100px;
+    align-items: center;
+
+
+    #chosen-fruit {
+        animation: bounce 1s ease;
+
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    }
+
+}
+
+#fruits-list {
+    position: absolute;
+    top: 174px;
+    left: 630px;
+}
+
+#fruit-container {
+    background: rgb(254, 254, 113);
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid black;
+
+    #comment {
+        margin-bottom: 5px;
+        color: rgb(228, 54, 1);
+        margin-bottom: 5px;
+    }
+
+    #emoji {
+        font-size: 160px;
+        padding: 5px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    #fruit-name {
+        text-transform: capitalize;
+    }
+
+    .save-cart {
+        margin-top: 5px;
+        background: green;
+        color: white;
+    }
+
+    .pass-card {
+        background: black;
+        color: white;
+    }
+
+}
+
+#store-stock {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    #stock {
+        font-size: 30px;
+    }
+}
+
+//style modal with ID
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 1;
+
+    #modal-box {
+        position: absolute;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 140px 50px;
+        width: 500px;
+        height: 400px;
+        text-align: center;
+        top: 240px;
+        left: 301px;
+        background: white;
+
+        p {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        #yes {
+            background: black;
+            color: white;
+            margin-right: 5px;
+        }
+
+        #no {
+            background: rgb(159, 158, 158);
+        }
+    }
+}
+
+//Toggle modal with class
+.modal-overlay,
+.modal-box {
+    visibility: hidden;
+}
